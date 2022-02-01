@@ -7,6 +7,63 @@
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: linear-gradient(rgba(29, 29, 29, 0.877),rgba(95, 4, 4, 0.5));
+      
+        }
+        .slider-content{
+            padding: 15px 6rem;
+            color:#fff;
+            max-width: 700px;
+            position: relative;
+            z-index: 10;
+            h4{
+                font-size:3rem;
+            }
+            .slider-button{
+                margin-top: 2rem;
+                button{
+                    padding: 15px 30px;
+                    background: darkred;
+                    color: #fff;
+                    border-radius: 5px;
+                    border-color: darkred;
+                    margin-right: 10px;
+                    transition: 0.3s ease-in-out;
+                    box-shadow: 0 0 15px 2px rgb(80, 80, 80);
+                    &:hover{
+                        background: transparent;
+                        color: #fff;
+                        border-color: #fff;
+                    }
+                }
+                a{
+                    padding: 15px 30px;
+                    transition: 0.3s ease-in-out;
+                    box-shadow: 0 0 15px 2px rgb(80, 80, 80);
+                    color: #fff;
+                    text-decoration: none;
+                    background: transparent;
+                    border: 1px solid #fff;
+                    display: inline-block;
+                    border-radius: 5px;
+                    &:hover{
+                        background: darkred;
+                        color: #fff;
+                        border-color: darkred;
+                    }
+                }
+            }
+        
+        }
     
     }
 }

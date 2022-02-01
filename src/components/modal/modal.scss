@@ -1,0 +1,46 @@
+.myModal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .modal-content{
+        padding: 2rem;
+        background: #222;
+        width: 50%;
+        opacity: 0;
+        transform: translateY(-250px);
+        transition: transform 0.6s ease, opacity 0.6s ease;
+        position: relative;
+        .modal-content-close{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #ccc;
+            &:hover{
+                color: #999;
+            }
+
+        }
+
+    }
+    &.active .modal-content{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

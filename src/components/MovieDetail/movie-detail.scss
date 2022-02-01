@@ -1,0 +1,29 @@
+.movie-detail{
+    .poster-img{
+        position: relative;
+        .rating{
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            background: #fff;
+            color:#222;
+            font-weight: 600;
+            padding: 12px;
+            display: block  ;
+            border-radius: 5px;
+        }
+    }
+    .movie-content{
+        .ul-genres{
+            list-style: none;
+            display: flex;
+            padding: 0;
+            li{
+                padding: 10px;
+                background: #ececec;
+                margin: 15px 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+}

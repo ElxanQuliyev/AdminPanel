@@ -1,0 +1,16 @@
+section{
+    padding: 3rem 0;
+    h3{
+        margin-bottom: 2rem;
+    }
+    .movie-item{
+        &:hover{
+            img{
+                opacity: .8;
+            }
+        }
+        img{
+            transition: .4s ease-in-out;
+        }
+    }
+}
