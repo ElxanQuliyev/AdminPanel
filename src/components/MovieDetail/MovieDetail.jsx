@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import apiConfig from "../../api/apiConfig";
 import "./movie-detail.scss";
 function MovieDetail() {
   const { id } = useParams("id");
-  const {type}=useParams("type")
+  const loc=useLocation();
+  const pathName=loc.pathname.split("/")[1]
   const [singleMovie, setsingleMovie] = useState(null);
   useEffect(() => {
-    fetch(`${apiConfig.baseUrl}${type}/${id}?api_key=${apiConfig.apiKey}`)
+    fetch(`${apiConfig.baseUrl}${pathName}/${id}?api_key=${apiConfig.apiKey}`)
       .then((m) => m.json())
       .then((m) => setsingleMovie(m));
-  },[id,type]);
+  },[]);
   console.log(singleMovie);
 
 

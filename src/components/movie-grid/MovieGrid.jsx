@@ -45,7 +45,7 @@ function MovieGrid({ type }) {
               {movies.map((movie) => (
                 <SwiperSlide key={movie.id}>
                   <div className="movie-item">
-                    <Link to={`/movie/${movie.id}/${type}`}>
+                    <Link to={`/${type}/${movie.id}/`}>
                       <img
                         className="img-fluid"
                         src={`${apiConfig.originalImage(movie.poster_path)}`}

@@ -9,7 +9,8 @@ function MyRoutes() {
         <Routes>
             <Route path="/" element={<Home/>} />
             <Route exact path="/movie" element={<Catalog/>} />
-            <Route exact path="/movie/:id/:type" element={<MovieDetail/>} />
+            <Route exact path="/movie/:id/" element={<MovieDetail/>} />
+            <Route exact path="/tv/:id/" element={<MovieDetail/>} />
             <Route path="/tv-show/" element={<Catalog/>} />
         </Routes>
     )

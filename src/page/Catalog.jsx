@@ -2,8 +2,8 @@ import React from 'react'
 
 function Catalog() {
     return (
-        <div>
-           
+        <div className='page-header'>
+           <h1>Movie</h1>
         </div>
     )
 }
