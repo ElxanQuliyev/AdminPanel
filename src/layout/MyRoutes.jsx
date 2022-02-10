@@ -7,11 +7,10 @@ import Home from '../page/Home'
 function MyRoutes() {
     return (
         <Routes>
+            <Route exact path="/search/:category/:keyword" element={<Catalog/>} />
+            <Route exact path="/:category/:id/" element={<MovieDetail/>} />
+            <Route exact path="/:category" element={<Catalog/>} />
             <Route path="/" element={<Home/>} />
-            <Route exact path="/movie" element={<Catalog/>} />
-            <Route exact path="/movie/:id/" element={<MovieDetail/>} />
-            <Route exact path="/tv/:id/" element={<MovieDetail/>} />
-            <Route path="/tv-show/" element={<Catalog/>} />
         </Routes>
     )
 }

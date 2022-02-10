@@ -1,11 +1,21 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
+import MovieList from "../components/movie-list/MovieList";
 
 function Catalog() {
-    return (
-        <div className='page-header'>
-           <h1>Movie</h1>
-        </div>
-    )
+    const {category}=useParams();
+  return (
+    <>
+      <div className="page-header">
+        <h1>{category=== "movie" ? "Movies" : "Tv Shows"}</h1>
+      </div>
+      <section className="">
+          <div className="container">
+              <MovieList category={category}/>
+          </div>
+      </section>
+    </>
+  );
 }
 
-export default Catalog
+export default Catalog;

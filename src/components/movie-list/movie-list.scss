@@ -1,0 +1,13 @@
+.movie-search{
+    display: flex;
+    input{
+        flex: 4;
+        padding: 10px;
+    }
+    button{
+        background: red;
+        color: #fff;
+        border: none;
+        flex: 1;
+    }
+}

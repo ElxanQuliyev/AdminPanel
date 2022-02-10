@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import apiConfig from "../../api/apiConfig";
 import "./movie-grid.scss";
-import { Link } from "react-router-dom";
+import MovieCard from "../movie-card/MovieCard";
 function MovieGrid({ type }) {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
@@ -44,20 +44,7 @@ function MovieGrid({ type }) {
             >
               {movies.map((movie) => (
                 <SwiperSlide key={movie.id}>
-                  <div className="movie-item">
-                    <Link to={`/${type}/${movie.id}/`}>
-                      <img
-                        className="img-fluid"
-                        src={`${apiConfig.originalImage(movie.poster_path)}`}
-                        alt=""
-                      />
-                      <h6 className="my-3">
-                        {type === "movie"
-                          ? movie.original_title
-                          : movie.original_name}
-                      </h6>
-                    </Link>
-                  </div>
+                    <MovieCard movie={movie} type={type}/>
                 </SwiperSlide>
               ))}
             </Swiper>
